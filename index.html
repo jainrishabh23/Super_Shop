@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <script src="1.js"></script> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css"> -->
+
+
+    <!-- <link rel="stylesheet" href="path/to/fontawesome.min.css"> -->
+
+    <link rel="icon" href="img/logos/favicon.ico">
+    <!-- <script src="script.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/> -->
+    <title>Super_Shop.com</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <section id="header">
+        <a href="#"><img src="img/logos/logo.png" class="logo" alt="shop.com"></a>
+        <div>
+
+            <ul id="navbar">
+                <ul class="dropdown">
+                    <!-- <li><a href="index.html">Home</a></li> -->
+
+                    <li><a class="active" href="index.html">Home</a>
+                        <ul>
+                            <li style="padding-bottom:8px ;">Menu</li>
+                            <li><a href="">Men's</a>
+                                <ul>
+                                    <li><a href="">T-shirt</a></li>
+                                    <li><a href="">Shirt</a></li>
+                                    <li><a href="#">Hoodie</a></li>
+                                    <li><a href="#">Jeans</a></li>
+                                    <li><a href="">Jacket</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">Women's</a>
+                                <ul>
+                                    <li><a href="">T-shirt</a></li>
+                                    <li><a href="">Shirt</a></li>
+                                    <li><a href="#">Hoodie</a></li>
+                                    <li><a href="#">Jeans</a></li>
+                                    <li><a href="">Top</a></li>
+                                    <li><a href="">Jacket</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href=""><i class="fa-solid fa-bag-shopping"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="hero">
+        <h4>Trade in offer</h4>
+        <h2>Super Value Deals</h2>
+        <h1>on ALL PRODUCTS</h1>
+        <p>Save More With Coupons & Upto 80% off ! </p>
+        <a href="shop.html">
+            <button>Shop Now</button>
+        </a>
+    </section>
+
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="img/feature/f1.png" alt="">
+            <h6>free shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/feature/f2.png" alt="">
+            <h6>Online Order</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/feature/f3.png" alt="">
+            <h6>Save Money</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/feature/f4.png" alt="">
+            <h6>Promotions</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/feature/f5.png" alt="">
+            <h6>Happy Sales</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/feature/f6.png" alt="">
+            <h6>Support</h6>
+        </div>
+    </section>
+
+    <section id="show">
+
+        <div class="container">
+            <div class="mySlides">
+                <div class="numbertext">1 / 2</div>
+                <img src="img/slide_gallery/show1.jpg" style="width:100%" height="400px">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 2</div>
+                <img src="img/slide_gallery/show2.png" style="width:100%" height="400px">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+    </section>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("demo");
+            let captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
+
+    <section id="product1" class="section-p1">
+        <h2><span> Featured Products</span></h2>
+        <p>summer collection</p>
+        <div class="pro-container">
+            <div class="pro" onclick="window.location.href='uspa.html';">
+                <img src="img/polo/polo1.jpg" alt="polo1">
+                <div class="des">
+                    <span>U.S. POLO ASSN.</span>
+                    <h5>Men's Regular fit T-Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+
+                    </div>
+                    <h4>
+                        <span><i class="fa-solid fa-indian-rupee-sign"></i></span>1168
+                    </h4>
+                </div>
+                <div class="cart"><a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>
+            </div>
+
+            <div class="pro" onclick="window.location.href='jean.html';">
+                <img src="img/jeans/j1.jpg" alt="jean1">
+                <div class="des">
+                    <span>Spykar</span>
+                    <h5>Men's Slim Jeans</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>
+                        <span><i class="fa-solid fa-indian-rupee-sign"></i></span>1,339
+                    </h4>
+                </div>
+                <div class="cart"><a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>
+            </div>
+
+            <div class="pro" onclick="window.location.href='adidas.html';">
+                <img src="img/adidas/a1.jpg" alt="adidas1">
+                <div class="des">
+                    <span>Adidas</span>
+                    <h5>Men's Slim fit T-Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>
+                        <span><i class="fa-solid fa-indian-rupee-sign"></i></span>899
+                    </h4>
+                </div>
+                <div class="cart"><a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>
+            </div>
+
+            <div class="pro" onclick="window.location.href='shorts.html';">
+                <img src="img/shorts/s1.jpg" alt="Short1">
+                <div class="des">
+                    <span>PUMA</span>
+                    <h5>Men's Liga Shorts Core</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>
+                        <span><i class="fa-solid fa-indian-rupee-sign"></i></span>3,380
+                    </h4>
+                </div>
+                <div class="cart"><a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>
+            </div>
+
+            <div class="pro" onclick="window.location.href='as.html';">
+                <img src="img/allen solly/a1.jpg" alt="allen solly1">
+                <div class="des">
+                    <span>Allen Solly</span>
+                    <h5>Men's Solid Slim Fit Casual Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>
+                        <span><i class="fa-solid fa-indian-rupee-sign"></i></span>990
+                    </h4>
+                </div>
+                <div class="cart"><a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>
+            </div>
+
+            <div class="pro" onclick="window.location.href='jester.html';">
+                <img src="img/halfshirt/h1.jpg" alt="jester1">
+                <div class="des">
+                    <span>jester</span>
+                    <h5>Men's Plain Solid Half Sleeves Regular Fit Formal Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>
+                        <span><i class="fa-solid fa-indian-rupee-sign"></i></span>1299
+                    </h4>
+                </div>
+                <div class="cart"><a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>
+            </div>
+
+            <div class="pro" onclick="window.location.href='Kalt.html';">
+                <img src="img/hoodie/h1.jpg" alt="Kalt1">
+                <div class="des">
+                    <span>Kalt</span>
+                    <h5>Men's Neck Half Sleeves Casual T-Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>
+                        <span><i class="fa-solid fa-indian-rupee-sign"></i></span>900
+                    </h4>
+                </div>
+                <div class="cart"><a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>
+            </div>
+
+            <div class="pro" onclick="window.location.href='pipers.html';">
+                <img src="img/round/r1.jpg" alt="pipers1">
+                <div class="des">
+                    <span>Pipers</span>
+                    <h5>Men's Regular Round T-Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>
+                        <span><i class="fa-solid fa-indian-rupee-sign"></i></span>770
+                    </h4>
+                </div>
+                <div class="cart"><a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <section id="banner" class="section-m1">
+        <h2>Up to <span>90% Off </span>- All T-shirts & Shirts</h2>
+        <button class="normal">Explore More</button>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2><span>New Arrivals</span></h2>
+        <p>summer collection</p>
+        <div class="pro-container">
+
+            <div class="pro">
+                <img src="img/jeans/j2.jpg" alt="jean2">
+                <div class="des">
+                    <span>Spykar</span>
+                    <h5>Men's Slim Jeans</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>
+                        <span><i class="fa-solid fa-indian-rupee-sign"></i></span>599
+                    </h4>
+                </div>
+                <div class="cart"><a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>
+            </div>
+
+            <div class="pro">
+                <img src="img/shorts/s2.jpg" alt="Short2">
+                <div class="des">
+                    <span>PUMA</span>
+                    <h5>Men's Liga Shorts Core</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>
+                        <span><i class="fa-solid fa-indian-rupee-sign"></i></span>599
+                    </h4>
+                </div>
+                <div class="cart"><a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>
+            </div>
+
+            <div class="pro">
+                <img src="img/adidas/a2.jpg" alt="adidas2">
+                <div class="des">
+                    <span>Adidas</span>
+                    <h5>Men's Slim fit T-Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>
+                        <span><i class="fa-solid fa-indian-rupee-sign"></i></span>599
+                    </h4>
+                </div>
+                <div class="cart"><a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>
+            </div>
+
+            <div class="pro">
+                <img src="img/allen solly/a2.jpg" alt="allen solly2">
+                <div class="des">
+                    <span>Allen Solly</span>
+                    <h5>Men's Solid Slim Fit Casual Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>
+                        <span><i class="fa-solid fa-indian-rupee-sign"></i></span>599
+                    </h4>
+                </div>
+                <div class="cart"><a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>
+            </div>
+
+            <div class="pro">
+                <img src="img/hoodie/h2.jpg" alt="Kalt2">
+                <div class="des">
+                    <span>Kalt</span>
+                    <h5>Men's Neck Half Sleeves Casual T-Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>
+                        <span><i class="fa-solid fa-indian-rupee-sign"></i></span>599
+                    </h4>
+                </div>
+                <div class="cart"><a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>
+
+            </div>
+
+            <div class="pro">
+                <img src="img/polo/polo2.jpg" alt="polo2">
+                <div class="des">
+                    <span>U.S. POLO ASSN.</span>
+                    <h5>Men's Regular fit T-Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>
+                        <span><i class="fa-solid fa-indian-rupee-sign"></i></span>599
+                    </h4>
+                </div>
+                <div class="cart"><a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>
+            </div>
+
+            <div class="pro">
+                <img src="img/halfshirt/h2.jpg" alt="jester2">
+                <div class="des">
+                    <span>jester</span>
+                    <h5>Men's Plain Solid Half Sleeves Regular Fit Formal Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>
+                        <span><i class="fa-solid fa-indian-rupee-sign"></i></span>599
+                    </h4>
+                </div>
+                <div class="cart"><a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>
+            </div>
+
+            <div class="pro">
+                <img src="img/round/r2.jpg" alt="pipers2">
+                <div class="des">
+                    <span>Pipers</span>
+                    <h5>Men's Regular Round T-Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>
+                        <span><i class="fa-solid fa-indian-rupee-sign"></i></span>599
+                    </h4>
+                </div>
+                <div class="cart"><a href="#"><i class="fa-solid fa-cart-plus"></i></a></div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <section id="sm-banner" class="section-p1">
+        <div class="banner-box">
+            <h4>Crazy deals</h4>
+            <h2>Buy 2 get 1 free</h2>
+            <span> The best classic dress is on sale at cara</span>
+            <a href="buyget.html"><button class="white">Learn More</button></a>
+        </div>
+
+        <div class="banner-box banner-box-2">
+            <h4>Today's Deals</h4>
+            <h2>Up to 70% off | Styles for Men</h2>
+            <span> The best classic styles</span>
+            <button class="white">Collection</button>
+        </div>
+
+        <div class="banner-box banner-box-3">
+            <h4>Top Footwear styles</h4>
+            <h2>Latest collections</h2>
+            <span>Just Launched | upto 20% off </span>
+            <button class="white">Visit Now</button>
+        </div>
+
+        <!-- <script src="script.js"></script> -->
+    </section>
+
+    <section id="banner4">
+        <div class="banner-box-4">
+            <h2>Top accessories</h2>
+            <h3>Top Brands</h3>
+        </div>
+
+        <div class="banner-box-5">
+            <h2>Top eyewear<br> styles</h2>
+            <h3>upto 20% off</h3>
+        </div>
+
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span>
+            </P>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logos/logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong> 562 Wellington Road, Street 32, San Francisco</P>
+            <p><strong>Phone: </strong> +01 2222 365 /(+91) 01 2345 6789</p>
+            <p><strong>Hours:</strong> 10:00 - 18:08, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img 1/pay/app.jpg" alt="">
+                <img src="img 1/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways </p>
+            <img src="img 1/pay/pay.png" alt="">
+        </div>
+
+        <div class="copyright">
+            <p>All rights reserved @rj |<span>Made By Rishabh Jain & Rishi Jain</span></p>
+        </div>
+
+    </footer>
+
+</html>
